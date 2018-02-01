@@ -2,10 +2,10 @@ CC=g++
 
 OBJS=main.o Cart_Point.o Cart_Vector.o Game_Object.o Game_Command.o Oxygen_Depot.o Astronaut.o Model.o Person.o Space_Station.o View.o Alien.o
 
-default: PA4
+default: Space_Race
 
-PA4: $(OBJS)
-	$(CC) -o PA4 $(OBJS) 
+Space_Race: $(OBJS)
+	$(CC) -o Space_Race $(OBJS) 
 
 Cart_Vector.o: Cart_Vector.cpp Cart_Vector.h
 	$(CC) -c Cart_Vector.cpp -o Cart_Vector.o 
@@ -44,5 +44,5 @@ main.o: main.cpp Cart_Point.h Cart_Vector.h Game_Command.h Oxygen_Depot.h Astron
 	$(CC) -c main.cpp
 
 clean: 
-	rm $(OBJS) PA4
+	rm $(OBJS) Space_Race
 
